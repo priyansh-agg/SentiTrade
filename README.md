@@ -1,6 +1,6 @@
 # SentiTrade
 
-A production-grade hackathon project that compares real-time market price action with news-based sentiment for crypto and stock assets.
+A production-grade project that compares real-time market price action with news-based sentiment for crypto and stock assets.
 
 The app shows a live TradingView chart, headline sentiment, sentiment trend, a BUY/SELL/HOLD signal, clear market metrics, alerts, and a correlation insight that explains whether sentiment and price are moving together or diverging.
 
