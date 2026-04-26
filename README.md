@@ -461,7 +461,7 @@ cp .env.example .env
 Backend `.env`:
 
 ```bash
-PORT=5000
+PORT=3000
 CLIENT_URL=http://localhost:5173
 MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/sentiment-dashboard
 NEWS_API_KEY=your_newsapi_key
@@ -471,8 +471,8 @@ ENABLE_LIVE_PRICE_API=false
 Frontend `.env`:
 
 ```bash
-VITE_API_URL=http://localhost:5000/api
-VITE_SOCKET_URL=http://localhost:5000
+VITE_API_URL=http://localhost:3000/api
+VITE_SOCKET_URL=http://localhost:3000
 ```
 
 If `MONGODB_URI` or `NEWS_API_KEY` are empty, the backend uses mock demo data. This keeps the dashboard usable during judging, demos, and offline development.
@@ -501,18 +501,18 @@ Open:
 http://localhost:5173
 ```
 
-If port `5000` is already occupied, run the backend on another port:
+The default local backend port is `3000`. If you use another backend port, update both frontend values together:
 
 ```bash
 cd backend
-PORT=5050 CLIENT_URL=http://localhost:5173 npm run dev
+PORT=4000 CLIENT_URL=http://localhost:5173 npm run dev
 ```
 
 Then run the frontend with matching API URLs:
 
 ```bash
 cd frontend
-VITE_API_URL=http://localhost:5050/api VITE_SOCKET_URL=http://localhost:5050 npm run dev
+VITE_API_URL=http://localhost:4000/api VITE_SOCKET_URL=http://localhost:4000 npm run dev
 ```
 
 ## Deployment
